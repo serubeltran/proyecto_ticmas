@@ -1,0 +1,9 @@
+git init
+git config user.name "Sergio Beltran"
+git config user.email "sergiorubenbeltran@gmail.com"
+git remote add origin https://github.com/nombreusuario/nombre_proyecto.git
+git push -u origin master
+
+git status ---- para ver la situación de los archivos, es decir, 
+	si están con commit o no.
+
