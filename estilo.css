@@ -1,53 +1,270 @@
-@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Play', sans-serif;
 }
 
 body {
-    background-color:darkseagreen;
-    font-family: 'Macondo', 'sans-serif';
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-h1 {
-    background: linear-gradient(to right, rgb(9, 243, 185), rgb(45, 206, 179));
-    margin: 0px;
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px;
+    position: relative;
+    min-height: 1000px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+
+}
+
+.container .left_container {
+    position: relative;
+    background-color:rgb(84, 84, 124);
+    padding: 40px;
+}
+
+.texto_perfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.texto_perfil .foto{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.texto_perfil .foto img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto_perfil h2{
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 20px;
+    text-transform: uppercase;
     text-align: center;
-    color: navy;
-    padding: 5px;
-    box-shadow: 0px 2px 5px gray;
+    font-weight: 600;
+    line-height: 1.4em;
 }
 
-.contenedor {
-    width: 50%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    box-shadow: 2px 2px 7px rgb(187, 198, 214);
-    border-radius: 10px;
+.texto_perfil h2 p{
+    font-size: 0.8em;
+    font-weight: 300;
 }
 
-@media (max-width: 600px) {
-    .contenedor {
-        width: 80%;
+.info_contacto{
+    padding-top: 40px;
+}
+
+.titulo_contacto{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.info_contacto ul{
+    position: relative;
+}
+
+.info_contacto ul li{
+    position: relative;
+    margin: 1px, 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+.info_contacto ul li .icono{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: aqua;
+}
+
+.info_contacto ul li span{
+    color: whitesmoke;
+    font-weight: 300;
+}
+
+.info_contacto.educacion li{
+    margin-bottom: 15px;
+}
+
+.info_contacto.educacion h5{
+    color: aquamarine;
+    font-weight: 500;
+}
+
+.info_contacto.educacion h4:nth-child(2){
+    color:whitesmoke;
+    font-weight: 500;
+}
+
+.info_contacto.educacion h4{
+    color:whitesmoke;
+    font-weight: 300;
+}
+
+.info_contacto.idiomas .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: grey;
+    display: block;
+    margin-top: 5px;
+
+}
+
+.info_contacto.idiomas .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: lightskyblue;
+}
+
+.container .right_container {
+    position: relative;
+    background-color: whitesmoke;
+    padding: 40px;
+}
+
+.acerca_de{
+    margin-bottom: 50px;
+}
+
+.acerca_de:last-child{
+    margin-bottom: 0;
+}
+
+.titulo2{
+    color: blueviolet;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #333;
+}
+
+.acerca_de .cuadro{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.acerca_de .cuadro .anio_trabajo{
+    min-width: 150px;
+}
+
+.acerca_de .cuadro .anio_trabajo h5{
+    text-transform: uppercase;
+    color:darkcyan;
+    font-weight: 600;
+}
+
+.acerca_de .cuadro .cargo h4{
+    text-transform: uppercase;
+    color:cadetblue;
+    font-size: 16px;
+}
+
+.habilidades .cuadro{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.habilidades .cuadro h4{
+    text-transform: uppercase;
+    color: darkslategray;
+    font-weight: 500;
+}
+
+.habilidades .cuadro .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background:darkgrey;
+}
+
+.habilidades .cuadro .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:deepskyblue;
+}
+
+.interes ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.interes ul li{
+    list-style: none;
+    color:grey;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interes ul li .fa{
+    color: mediumaquamarine;
+    font-size: 18px;
+    width: 20px;
+}
+
+@media (max-width:1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interes ul{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
-h2, p {
-    color: rgb(17, 22, 37);
+@media (max-width:600px){
+    .acerca_de .cuadro{
+        flex-direction: column;
+    }
+    .acerca_de .cuadro .anio_trabajo{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .interes ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .habilidades .cuadro{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
-
-h2 span, p span {
-    color: rgb(119, 137, 172);
-}
-
-img {
-    border-radius: 50%;
-    width: 100px;
-}
-

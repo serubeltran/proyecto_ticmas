@@ -1,9 +1,13 @@
 git init
 git config user.name "Sergio Beltran"
 git config user.email "sergiorubenbeltran@gmail.com"
+git status ---> para ver el estado de mis archivos.
+git add .   ---> Agrego todos los archivos de mi directorio. El punto actúa como comodín para TODOS!!!!!
+git commit -m "Este es el mensaje que le doy al commit, o sea, para explicar los cambios"
 git remote add origin https://github.com/nombreusuario/nombre_proyecto.git
 git push -u origin master
 
 git status ---- para ver la situación de los archivos, es decir, 
 	si están con commit o no.
 
+https://github.com/serubeltran/proyecto_ticmas.git
